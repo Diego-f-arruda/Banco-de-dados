@@ -1,3 +1,12 @@
+CREATE TABLE clientes(
+		id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+		nome VARCHAR(125) NOT NULL,
+		cpf VARCHAR(14) UNIQUE NOT NULL,
+		telefone VARCHAR(14) NOT NULL,
+		email VARCHAR(100) UNIQUE NOT NULL,
+		endereco VARCHAR(100) NOT NULL
+	)
+
 INSERT INTO clientes (nome, cpf, telefone, email, endereco) VALUES
 ('Ana Silva', '12345678900', '(11) 98765-4321', 'ana.silva@email.com', 'Rua das Flores, 123, São Paulo - SP'),
 ('João Oliveira', '23456789011', '(21) 91234-5678', 'joao.oliveira@email.com', 'Avenida Brasil, 456, Rio de Janeiro - RJ'),
